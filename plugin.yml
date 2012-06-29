@@ -1,0 +1,8 @@
+name: SignTips
+main: com.github.chrimithegamer.signtips.SignTips
+version: 2.1
+author: Chrimithegamer
+commands:
+  signtips:
+    description: Main command.
+    usage: /signtips
