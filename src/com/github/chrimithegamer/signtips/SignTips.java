@@ -4,8 +4,8 @@ package com.github.chrimithegamer.signtips;
  * SignTips
  * Version 2.1
  * CB 1.2.5-R4.0
- * by Chrimithegamer
- * Original by iMint
+ * by Chrimithegamer (Code), Sway (Ideas & Testing)
+ * Original by iMint and Furd
  */
 import java.io.BufferedReader;
 import java.io.DataInputStream;
@@ -70,14 +70,14 @@ public class SignTips extends JavaPlugin {
 	public static void save() {
 		// Save promotions
 		try {
-			FileOutputStream buttonOS = new FileOutputStream(pData);
-			PrintStream buttonOut = new PrintStream(buttonOS);
+			FileOutputStream signOS = new FileOutputStream(pData);
+			PrintStream signOut = new PrintStream(signOS);
 			for(Entry<Block, String> entry : promotions.entrySet()) {
 				Block block = entry.getKey();
 				String group = entry.getValue();
 				String world = block.getWorld().getName();
 				String print = block.getX() + "," + block.getY() + "," + block.getZ() + ":" + group + ":" + world;
-				buttonOut.println(print);
+				signOut.println(print);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -130,9 +130,9 @@ public class SignTips extends JavaPlugin {
 				String _group = temp[1];
 				String _world = temp[2];
 				World world = getServer().getWorld(_world);
-				Block button = world.getBlockAt(Integer.parseInt(_button[0]), Integer.parseInt(_button[1]), Integer.parseInt(_button[2]));
+				Block sign = world.getBlockAt(Integer.parseInt(_button[0]), Integer.parseInt(_button[1]), Integer.parseInt(_button[2]));
 				String group = _group;
-				promotions.put(button, group);
+				promotions.put(sign, group);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -177,9 +177,9 @@ public class SignTips extends JavaPlugin {
 				String _world2 = _warp[0];
 				World world = getServer().getWorld(_world);
 				World world2 = getServer().getWorld(_world2);
-				Block button = world.getBlockAt(Integer.parseInt(_button[1]), Integer.parseInt(_button[2]), Integer.parseInt(_button[3]));
+				Block sign = world.getBlockAt(Integer.parseInt(_button[1]), Integer.parseInt(_button[2]), Integer.parseInt(_button[3]));
 				Location warp = new Location(world2, Integer.parseInt(_warp[0]), Integer.parseInt(_warp[1]), Integer.parseInt(_warp[2]));
-				warps.put(button, warp);
+				warps.put(sign, warp);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
