@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 === SignTips - Promote/Warp users with the press of a sign! ===
 By Chrimithegamer (Code), Sway (Ideas & Testing)
 Original - ButtonPromote - iMint
 
-Version: v2.0
+Version: v2.1
 =======
 
  Supports:
@@ -13,21 +12,3 @@ Version: v2.0
 
  Downloads:
  You can find the downloads and more information at http://dev.bukkit.org/server-mods/signtips/
-
-
-=======
-=== SignTips - Promote/Warp users with the press of a sign! ===
-By Chrimithegamer (Code), Sway (Ideas & Testing)
-Original - ButtonPromote - iMint
-
-Version: v2.0
-=======
-
- Supports:
- -Minecraft 1.2.5
- -CraftBukkit 1.2.5 - R4.0
- -Vault
-
- Downloads:
- You can find the downloads and more information at http://dev.bukkit.org/server-mods/signtips/
->>>>>>> Minor Changes - v2.1
